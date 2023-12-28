@@ -1,0 +1,1 @@
+export { PostsDatasourceImpl } from './posts';
