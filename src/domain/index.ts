@@ -1,1 +1,1 @@
-export { type PostsDatasource, PostModel } from './posts';
+export { type PostsDatasource, PostModel, GetPostsUsecase } from './posts';
