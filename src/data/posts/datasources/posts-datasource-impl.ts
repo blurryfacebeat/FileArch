@@ -1,5 +1,6 @@
 import { PostModel, type PostsDatasource } from '@/domain';
 import { validatePostsResponse } from '@/data/posts/validations';
+import GetPostsError from '@/domain/posts/errors/get-posts-error';
 
 export class PostsDatasourceImpl implements PostsDatasource {
   // any, так как сейчас в проекте нет интерфейса для httpClient
@@ -16,20 +17,20 @@ export class PostsDatasourceImpl implements PostsDatasource {
         return new PostModel(id, title, text, author, created_at);
       });
     } catch {
-      throw new Error('Get posts error');
+      throw new GetPostsError();
     }
   }
 
-  async getById(id: PostModel['id']): Promise<PostModel> {
+  async getById(id: string): Promise<PostModel> {
     return new PostModel('1', '1', '1', '1', new Date());
   }
 
-  async delete(id: PostModel['id']): Promise<PostModel> {
+  async delete(id: string): Promise<PostModel> {
     return new PostModel('1', '1', '1', '1', new Date());
   }
 
   async update(
-    id: PostModel['id'],
+    id: string,
     body: Partial<Pick<PostModel, 'text' | 'title'>>,
   ): Promise<PostModel> {
     return new PostModel('1', '1', '1', '1', new Date());

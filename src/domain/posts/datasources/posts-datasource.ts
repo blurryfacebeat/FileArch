@@ -2,10 +2,10 @@ import { type PostModel } from '@/domain';
 
 export interface PostsDatasource {
   get: () => Promise<PostModel[]>;
-  getById: (id: PostModel['id']) => Promise<PostModel>;
-  delete: (id: PostModel['id']) => Promise<PostModel>;
+  getById: (id: string) => Promise<PostModel>;
+  delete: (id: string) => Promise<PostModel>;
   update: (
-    id: PostModel['id'],
+    id: string,
     body: Partial<Pick<PostModel, 'text' | 'title'>>,
   ) => Promise<PostModel>;
 }
