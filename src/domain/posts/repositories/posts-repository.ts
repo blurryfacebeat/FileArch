@@ -1,6 +1,6 @@
 import { type PostModel } from '@/domain';
 
-export interface PostsDatasource {
+export interface PostsRepository {
   get: () => Promise<PostModel[]>;
   getById: (id: string) => Promise<PostModel>;
   delete: (id: string) => Promise<PostModel>;

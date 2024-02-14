@@ -1,1 +1,1 @@
-export { PostsDatasourceImpl } from './posts';
+export { PostsRepositoryImpl } from './posts';

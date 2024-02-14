@@ -1,0 +1,1 @@
+Можно и Interactors использовать, вместо UseCases

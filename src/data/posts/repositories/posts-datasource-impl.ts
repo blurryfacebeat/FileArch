@@ -1,8 +1,8 @@
-import { PostModel, type PostsDatasource } from '@/domain';
+import { PostModel, type PostsRepository } from '@/domain';
 import { validatePostsResponse } from '@/data/posts/validations';
 import GetPostsError from '@/domain/posts/errors/get-posts-error';
 
-export class PostsDatasourceImpl implements PostsDatasource {
+export class PostsRepositoryImpl implements PostsRepository {
   // any, так как сейчас в проекте нет интерфейса для httpClient
   constructor(private readonly httpClient: any) {}
 
