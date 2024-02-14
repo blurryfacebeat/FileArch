@@ -1,3 +1,3 @@
 export type { PostsDatasource } from './datasources';
-export { PostModel } from './models';
+export { PostModel } from './entities';
 export { GetPostsUsecase } from './usecases';
